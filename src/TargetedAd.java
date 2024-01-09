@@ -7,9 +7,6 @@ public class TargetedAd {
   {
     /*  
      * TODO:
-     * PREPARATION WORK
-     * (1) Create a file called targetWords.txt. Populate this file with words on each line that
-     *     you think would determine if a user is a dog or cat owner.
      * 
      * PROGRAMMING
      * (2) Create a new DataCollector object and set the data to "socialMediaPostsSmall.txt" and "targetWords.txt"
