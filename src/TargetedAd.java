@@ -1,6 +1,3 @@
-/*
- * Problem 2 Sell My Pet Food
- */
 public class TargetedAd {
 
   public static void main(String[] args)
@@ -9,11 +6,6 @@ public class TargetedAd {
      * TODO:
      * 
      * PROGRAMMING
-     * (2) Create a new DataCollector object and set the data to "socialMediaPostsSmall.txt" and "targetWords.txt"
-     *     Important: Use the socialMedialPostsSmall to create your algorithm. Using a small file will help you 
-     *     generate your solution quicker and give you the ability to double check your work.
-     * (3) Create a String variable to hold the names of all the user. (The first word of every post is 
-     *     a person's username)
      * (4) Compare each user's post to each target word. If a user mentions a target word, add their username to 
      *     the String of users. Separate usernames with a space. 
      *         Hint: You can use loops to look through each word. 
@@ -30,8 +22,10 @@ public class TargetedAd {
 
 
     /* your code here */
-    
-     
+    DataCollector dataCollector = new DataCollector();
+    dataCollector.setData("socialMediaPosts.txt", "targetWords.txt");
+
+    String usernames;
   }
 
 }
