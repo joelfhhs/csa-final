@@ -25,7 +25,19 @@ public class TargetedAd {
     DataCollector dataCollector = new DataCollector();
     dataCollector.setData("socialMediaPosts.txt", "targetWords.txt");
 
-    String usernames;
+    String usernames = "";
+    while (true) {
+      String post = dataCollector.getNextPost();
+      String user = post.split(" ")[0];
+      if (post.equalsIgnoreCase("none")) {
+        break;
+      }
+      if (post.contains(dataCollector.getNextTargetWord())){
+        usernames += user;
+
+      }
+
+    }
   }
 
 }
