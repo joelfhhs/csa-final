@@ -6,10 +6,6 @@ public class TargetedAd {
      * TODO:
      * 
      * PROGRAMMING
-     * (4) Compare each user's post to each target word. If a user mentions a target word, add their username to 
-     *     the String of users. Separate usernames with a space. 
-     *         Hint: You can use loops to look through each word. 
-     *         Hint2: You can use indexOf to check if a word is in a user post. 
      * (5) Once you have all the users, use your DataCollector's prepareAdvertisement method to prepare a file 
      *     with all users and the advertisement you will send them.
      *         Additional Info: The prepareAdvertisement creates a new file on your computer. Check the posts of
