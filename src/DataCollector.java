@@ -115,7 +115,7 @@ public class DataCollector
     try
     {
       FileWriter fw = new FileWriter(filename);
-      // Strin method split splits a string based on the provided token
+      // String method split splits a string based on the provided token
       // and returns an array of individual substrings
       for (String un : usernames.split(" "))
       {

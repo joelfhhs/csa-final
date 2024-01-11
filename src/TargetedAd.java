@@ -21,18 +21,52 @@ public class TargetedAd {
     DataCollector dataCollector = new DataCollector();
     dataCollector.setData("socialMediaPosts.txt", "targetWords.txt");
 
-    StringBuilder usernamesBuilder = new StringBuilder();
+    String[] dogWords = {
+            "dog",
+            "doggy",
+            "dogs",
+            "pup",
+            "puppy",
+            "doggie",
+            "wolf",
+            "fur",
+            "chewed"
+    };
+    String[] catWords = {
+            "cat",
+            "kitten",
+            "lion",
+            "#bestkittyever"
+    };
+
+    String dogUsernames = "";
+    String catUsernames = "";
+    String othersUsernames = "";
+
     while (true) {
       String post = dataCollector.getNextPost();
       String user = post.split(" ")[0];
       if (post.equalsIgnoreCase("none")) {
         break;
       }
-      if (post.contains(dataCollector.getNextTargetWord())){
-        usernamesBuilder.append(user).append(" ");
+      boolean found = false;
+      for (String word : dogWords) {
+        if (post.contains(word)) {
+          dogUsernames += user + " ";
+          found = true;
+          break;
+        }
       }
+      if (found) continue;
+      for (String word : catWords) {
+        if (post.contains(word)) {
+          dogUsernames += user + " ";
+          found = true;
+          break;
+        }
+      }
+      if (found) continue;
+      othersUsernames += user + " ";
     }
-    String usernames = usernamesBuilder.toString();
   }
-
 }
